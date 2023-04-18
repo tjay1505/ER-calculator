@@ -1,0 +1,54 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+}
+
+.content {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(92, 65, 110);
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-template-rows: 1fr 1fr 4fr;
+}
+.content .header {
+  width: 80vw;
+  height: 3em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-style: italic;
+}
+.content .header .bugermenu {
+  width: 2.5em;
+  height: 2em;
+  cursor: pointer;
+}
+.content .header .bugermenu .bar {
+  margin: 20%;
+  border: 0.5px solid white;
+}
+.content .opscreen {
+  width: 80vw;
+  height: 8em;
+  background-color: rgb(29, 25, 48);
+  border-radius: 0.7em;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+.content .opscreen h2 {
+  margin-right: 1em;
+}
+.content .keypad {
+  width: 80vw;
+  height: 20em;
+  background-color: rgb(29, 25, 48);
+  border-radius: 0.7em;
+}/*# sourceMappingURL=index.css.map */
