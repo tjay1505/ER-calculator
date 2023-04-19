@@ -11,7 +11,7 @@ body {
 .content {
   width: 100vw;
   height: 100vh;
-  background-color: rgb(92, 65, 110);
+  background-color: rgb(62, 58, 108);
   display: grid;
   align-items: center;
   justify-content: center;
@@ -51,4 +51,32 @@ body {
   height: 20em;
   background-color: rgb(29, 25, 48);
   border-radius: 0.7em;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+  font-weight: bolder;
+}
+.content .keypad .boxes {
+  width: 4.5em;
+  height: 2em;
+  color: rgb(0, 0, 0);
+  background-color: rgb(146, 146, 146);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.4em;
+  box-shadow: 0px 1px 1px 1.3px white;
+}
+.content .keypad .boxes:hover {
+  box-shadow: 0px 1px 1px 1px rgb(29, 25, 48);
+}
+.content .keypad .prime {
+  grid-column: span 2;
+}
+.content .keypad .prime1 {
+  background-color: rgb(101, 72, 141);
+}
+.content .keypad .prime2 {
+  background-color: rgb(224, 0, 0);
 }/*# sourceMappingURL=index.css.map */
