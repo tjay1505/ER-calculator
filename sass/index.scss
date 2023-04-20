@@ -27,7 +27,8 @@ $font2:fantasy;
 $font3:Arial, Helvetica, sans-serif;
 body{
     font-family:$font3;
-    color: $t2tx;
+    color: blue;
+    
 }
 
 //main content thats takes total element inside {.content}
@@ -53,6 +54,7 @@ body{
             width: 2.5em;
             height: 2em;
             cursor: pointer;
+            z-index: 2;
             //three slashes {.bar}
             .bar{
                 margin: 20%;
@@ -89,8 +91,9 @@ body{
         font-weight: bolder;
         //boxes contain numbers
         .boxes{
-            width: 4.5em;
-            height:2em;
+            width: 5em;
+            border: 0.5px solid white;
+            height:2.5em;
             color: $t1tx;
             background-color:$t1bg2;
             display: flex;
@@ -104,6 +107,7 @@ body{
         }
         .prime{
             grid-column: span 2;
+            width: 13em;
         }
         .prime1{
             background-color: $t2c1;
@@ -114,6 +118,49 @@ body{
     }
 }
 
+//themebox for menu box styling
+.themebox{
+    z-index: 1;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #ffffff25;
+    transition: 0.8s ease-in-out;
+    .themenav{
+        width: 50vw;
+        height: 50vh;
+        background-color: #fff;
+        border-radius: 0.7em;
+        color: black;
+        display: grid;
+        align-items: center;
+        justify-items: center;
+        grid-template-columns: 1fr;
+        //close x styling
+       .themehead1{
+            color: rgb(255, 255, 255);
+            grid-column: span 0;
+            background-color:red;
+            padding: 1px;
+            border-radius: 0.3em;
+            text-align: center;
+       }
+       span{
+        font-family:cursive;
+        font-size: larger;
+        transition: 0.1s ease ;
+       }
+       span:hover{
+        font-size: x-large;
+        cursor: pointer;
+       }
+    }
+}
 
 
 

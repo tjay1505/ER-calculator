@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>samplre</title>
+    <style>
+        body{
+            --foo:rgb(208, 208, 186);
+        }
+        :root{
+            --cl:blue;
+        }
+        #para{
+            color: var(--cl);
+            background-color: var(--foo);
+        }
+    </style>
+</head>
+<body>
+    <p id="para" >heloo</p>
+    <script>
+       // document.documentElement.style.setProperty('--foo','#000')
+     console.log(getComputedStyle(document.documentElement).getPropertyValue('--c1'))
+    
+        document.documentElement.style.setProperty('--foo','pink')
+    </script>
+</body>
+</html>

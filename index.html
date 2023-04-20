@@ -8,46 +8,94 @@
     <title>calcy</title>
 </head>
 <body>
-    <div class="content">
+    <div id="contents" class="content">
         <div class="header">
 
-            <div class="logo">
-                <h1>calcy</h1>
+            <div id="logos" class="logo">
+                <h1>calcy <a href="./sample.html">a</a> </h1>
             </div>
 
-            <div class="bugermenu">
+            <div id="bugermenus" class="bugermenu" onclick="Opener()" >
                     <div class="bar"></div>
                     <div class="bar"></div>
                     <div class="bar"></div>
             </div>
 
         </div>
-
+        
         <div class="opscreen">
             <h2 id="op" >8608167</h2>
         </div>
 
         <div class="keypad">
-            <div onclick="Loader()" class="boxes">1</div>
-            <div class="boxes">2</div>
-            <div class="boxes">3</div>
-            <div onclick="Adder()" class="boxes">+</div>
-            <div class="boxes">4</div>
-            <div class="boxes">5</div>
-            <div class="boxes">6</div>
-            <div class="boxes">-</div>
-            <div class="boxes">7</div>
-            <div class="boxes">8</div>
-            <div class="boxes">9</div>
-            <div class="boxes">x</div>
-            <div class="boxes">0</div>
-            <div class="boxes">.</div>
-            <div class="boxes prime1">DEL</div>
-            <div class="boxes">/</div>
-            <div onclick="Reseter()" class="boxes prime prime1">RESET</div>
-            <div onclick="Calc()" class="boxes prime prime2">=</div>
+            <button onclick="Loader()" class="boxes">1</button>
+            <button class="boxes">2</button>
+            <button class="boxes">3</button>
+            <button onclick="Adder()" class="boxes">+</button>
+            <button class="boxes">4</button>
+            <button class="boxes">5</button>
+            <button class="boxes">6</button>
+            <button class="boxes">-</button>
+            <button class="boxes">7</button>
+            <button class="boxes">8</button>
+            <button class="boxes">9</button>
+            <button class="boxes">x</button>
+            <button class="boxes">0</button>
+            <button class="boxes">.</button>
+            <button class="boxes prime1">DEL</button>
+            <button class="boxes">/</button>
+            <button onclick="Reseter()" class="boxes prime prime1">RESET</button>
+            <button onclick="Calc()" class="boxes prime prime2">=</button>
         </div>
     </div>
-    <script src="/index.js"></script>
+    <div id="themeboxs" class="themebox">
+        <div class="themenav">
+            <span onclick="Closer()" class="themehead1" >x close</span>
+            <span onclick="Theme1()" >theme 1</span>
+            <span onclick="Theme2()" >theme 2</span>
+            <span onclick="Theme3()" >theme 3</span>
+            
+        </div>
+    </div>
+    <!-- <script src="/index.js"></script> -->
+    <script>
+        const themeboxobj = document.getElementById('themeboxs');
+        const contentsobj = document.getElementById('contents');
+        const logosobj = document.getElementById('logos');
+        const bugermenusobj = document.getElementById('bugermenus');
+        bugermenusobj
+        function Opener(){
+            if(themeboxobj.style.display === 'none'){
+            themeboxobj.style.display = 'flex';
+            contentsobj.style.filter = 'blur(3.5px)'
+        }
+        else{
+            themeboxobj.style.display = 'none';
+        }
+        }
+        function Closer(){
+            themeboxobj.style.display = 'none';
+            contentsobj.style.filter = 'blur(0px)'
+        }
+        function Theme1(){
+            contentsobj.style.backgroundColor = 'white';
+            Closer();
+        }
+        function Theme2(){
+            const var1 = document.querySelector(':root');
+            console.log();
+            Closer();
+        }
+        function Theme3(){
+            const var1 = document.querySelector(':root');
+            console.log();
+            Closer();
+        }
+         function del(){
+            var dels =document.getElementById('ops').value;
+            
+         }
+
+    </script>
 </body>
 </html>

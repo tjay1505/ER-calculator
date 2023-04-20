@@ -5,7 +5,7 @@
 
 body {
   font-family: Arial, Helvetica, sans-serif;
-  color: white;
+  color: blue;
 }
 
 .content {
@@ -29,6 +29,7 @@ body {
   width: 2.5em;
   height: 2em;
   cursor: pointer;
+  z-index: 2;
 }
 .content .header .bugermenu .bar {
   margin: 20%;
@@ -58,8 +59,9 @@ body {
   font-weight: bolder;
 }
 .content .keypad .boxes {
-  width: 4.5em;
-  height: 2em;
+  width: 5em;
+  border: 0.5px solid white;
+  height: 2.5em;
   color: rgb(0, 0, 0);
   background-color: rgb(146, 146, 146);
   display: flex;
@@ -73,10 +75,53 @@ body {
 }
 .content .keypad .prime {
   grid-column: span 2;
+  width: 13em;
 }
 .content .keypad .prime1 {
   background-color: rgb(101, 72, 141);
 }
 .content .keypad .prime2 {
   background-color: rgb(224, 0, 0);
+}
+
+.themebox {
+  z-index: 1;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.1450980392);
+  transition: 0.8s ease-in-out;
+}
+.themebox .themenav {
+  width: 50vw;
+  height: 50vh;
+  background-color: #fff;
+  border-radius: 0.7em;
+  color: black;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  grid-template-columns: 1fr;
+}
+.themebox .themenav .themehead1 {
+  color: rgb(255, 255, 255);
+  grid-column: span 0;
+  background-color: red;
+  padding: 1px;
+  border-radius: 0.3em;
+  text-align: center;
+}
+.themebox .themenav span {
+  font-family: cursive;
+  font-size: larger;
+  transition: 0.1s ease;
+}
+.themebox .themenav span:hover {
+  font-size: x-large;
+  cursor: pointer;
 }/*# sourceMappingURL=index.css.map */
